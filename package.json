@@ -1,0 +1,32 @@
+{
+  "name": "react-iterators",
+  "version": "1.0.0",
+  "description": "Common iterators (like Map, Slice, etc.) as React components",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "./scripts/check.sh",
+    "flow": "flow"
+  },
+  "author": "Jon Brennecke <jpbrennecke@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonbrennecke/react-iterators.git"
+  },
+  "dependencies": {
+    "lodash": "4.17.5",
+    "react": "16.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.18.0",
+    "babel-preset-flow": "6.23.0",
+    "babel-preset-react": "6.11.1",
+    "eslint": "2.10.2",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-react": "6.0.0",
+    "flow-bin": "0.66.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "presets": ["react", "flow"],
+  "plugins": [
+    ["transform-es2015-modules-commonjs", { "loose": true }],
+    "add-module-exports"
+  ],
+  "ignore": [
+    "/node_modules/"
+  ]
+}
