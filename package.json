@@ -10,7 +10,7 @@
     "build": "webpack",
     "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\"",
     "clean": "rm -rf dist",
-    "prepare": "npm run clean && npm run build"
+    "prepare": "npm run clean && npm run check && npm run build"
   },
   "author": "Jon Brennecke <jpbrennecke@gmail.com>",
   "license": "MIT",
