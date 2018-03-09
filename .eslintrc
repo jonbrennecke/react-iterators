@@ -14,7 +14,7 @@
     "import/named": 0,
     "import/default": 0,
     "import/no-named-as-default": 0,
-    "comma-dangle": [ 2, "never" ],
+    "comma-dangle": [ 2, "always-multiline" ],
     "no-cond-assign": [ 2, "always" ],
     "no-console": 1,
     "no-constant-condition": 2,

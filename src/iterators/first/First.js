@@ -5,9 +5,9 @@ import first from 'lodash/first';
 import type { Element } from 'react';
 
 type Props<T> = {
-  array: T[];
-  render: T => ?Element<*>;
-  container?: React$ElementType;
+  array: T[],
+  render: T => ?Element<*>,
+  container?: React$ElementType,
 };
 
 // eslint-disable-next-line object-curly-spacing
@@ -18,16 +18,8 @@ export default function First<T>({ array, render, container }: Props<T>) {
   }
   const contents = render(item);
   if (!container) {
-    return (
-      <div>
-        {contents}
-      </div>
-    );
+    return <div>{contents}</div>;
   }
   const Container = container;
-  return (
-    <Container>
-      {contents}
-    </Container>
-  );
+  return <Container>{contents}</Container>;
 }

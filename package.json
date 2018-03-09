@@ -7,7 +7,8 @@
     "test": "karma start --single-run --browsers PhantomJS",
     "check": "./scripts/check.sh",
     "flow": "flow",
-    "build": "webpack"
+    "build": "webpack",
+    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\""
   },
   "author": "Jon Brennecke <jpbrennecke@gmail.com>",
   "license": "MIT",
@@ -41,6 +42,7 @@
     "karma-jasmine": "1.1.1",
     "karma-phantomjs-launcher": "1.0.4",
     "karma-webpack": "2.0.13",
+    "prettier": "1.11.1",
     "react-dom": "16.2.0",
     "webpack": "4.1.1",
     "webpack-cli": "2.0.10"
