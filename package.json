@@ -2,13 +2,15 @@
   "name": "react-iterators",
   "version": "1.0.0",
   "description": "Common iterators (like Map, Slice, etc.) as React components",
-  "main": "src/index.js",
+  "main": "dist/main.bundle.js",
   "scripts": {
     "test": "karma start --single-run --browsers PhantomJS",
     "check": "./scripts/check.sh",
     "flow": "flow",
     "build": "webpack",
-    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\""
+    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\"",
+    "clean": "rm -rf dist",
+    "prepare": "npm run clean && npm run build"
   },
   "author": "Jon Brennecke <jpbrennecke@gmail.com>",
   "license": "MIT",
