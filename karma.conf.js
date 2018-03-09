@@ -9,7 +9,7 @@ module.exports = (config) => {
     basePath: '',
     autoWatch: false,
     files: [
-      'node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
+      'node_modules/babel-polyfill/browser.js',
       { pattern: 'tests/**/*.js' }
     ],
     client: {
@@ -21,10 +21,13 @@ module.exports = (config) => {
     },
     reporters: ['dots'],
     singleRun: true,
-    webpack: webpackConfig,
-    // webpackMiddleware: {
-    //   noInfo: true
-    // },
+    webpack: {
+      ...webpackConfig,
+      entry: null
+    },
+    webpackMiddleware: {
+      noInfo: true
+    },
     browserNoActivityTimeout: 60000
   });
 };
