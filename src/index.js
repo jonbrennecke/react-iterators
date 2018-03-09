@@ -1,20 +1,9 @@
 /* @flow */
-import First from './iterators/first/First';
-import Map from './iterators/map/Map';
-import Nth from './iterators/nth/Nth';
-import Slice from './iterators/slice/Slice';
-import Take from './iterators/take/Take';
-import Three from './iterators/three/Three';
-import Times from './iterators/times/Times';
-import Two from './iterators/two/Two';
-
-export default {
-  First,
-  Map,
-  Nth,
-  Slice,
-  Take,
-  Three,
-  Times,
-  Two
-};
+export { default as First } from './iterators/first/First';
+export { default as Map } from './iterators/map/Map';
+export { default as Nth } from './iterators/nth/Nth';
+export { default as Slice } from './iterators/slice/Slice';
+export { default as Take } from './iterators/take/Take';
+export { default as Three } from './iterators/three/Three';
+export { default as Times } from './iterators/times/Times';
+export { default as Two } from './iterators/two/Two';
