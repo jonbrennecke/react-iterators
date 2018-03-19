@@ -10,6 +10,8 @@ type Props<T> = {
   array: T[],
   render: (T[]) => ?Element<*>,
   container?: React$ElementType,
+  className?: ?string,
+  id?: ?string,
 };
 
 export default function Slice<T>({
@@ -18,12 +20,22 @@ export default function Slice<T>({
   array,
   render,
   container,
-  // eslint-disable-next-line object-curly-spacing
-}: Props<T>) {
+  className,
+  id,
+}: // eslint-disable-next-line object-curly-spacing
+Props<T>) {
   const contents = render(slice(array, start, end));
   if (!container) {
-    return <div>{contents}</div>;
+    return (
+      <div className={className} id={id}>
+        {contents}
+      </div>
+    );
   }
   const Container = container;
-  return <Container>{contents}</Container>;
+  return (
+    <Container className={className} id={id}>
+      {contents}
+    </Container>
+  );
 }

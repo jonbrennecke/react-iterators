@@ -9,18 +9,35 @@ type Props<T> = {
   array: T[],
   render: T => ?Element<*>,
   container?: React$ElementType,
+  className?: ?string,
+  id?: ?string,
 };
 
+export default function Nth<T>({
+  n,
+  array,
+  render,
+  container,
+  className,
+  id,
 // eslint-disable-next-line object-curly-spacing
-export default function Nth<T>({ n, array, render, container }: Props<T>) {
+}: Props<T>) {
   const item = nth(array, n);
   if (!item) {
     return null;
   }
   const contents = render(item);
   if (!container) {
-    return <div>{contents}</div>;
+    return (
+      <div className={className} id={id}>
+        {contents}
+      </div>
+    );
   }
   const Container = container;
-  return <Container>{contents}</Container>;
+  return (
+    <Container className={className} id={id}>
+      {contents}
+    </Container>
+  );
 }

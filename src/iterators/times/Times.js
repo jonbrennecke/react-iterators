@@ -8,14 +8,30 @@ type Props<T> = {
   n: number,
   render: T => ?Element<*>,
   container?: React$ElementType,
+  className?: ?string,
+  id?: ?string,
 };
 
+export default function Times<T>({
+  n,
+  render,
+  container,
+  className,
+  id,
 // eslint-disable-next-line object-curly-spacing
-export default function Times<T>({ n, render, container }: Props<T>) {
+}: Props<T>) {
   const contents = times(n).map(render);
   if (!container) {
-    return <div>{contents}</div>;
+    return (
+      <div className={className} id={id}>
+        {contents}
+      </div>
+    );
   }
   const Container = container;
-  return <Container>{contents}</Container>;
+  return (
+    <Container className={className} id={id}>
+      {contents}
+    </Container>
+  );
 }
