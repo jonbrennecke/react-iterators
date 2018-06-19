@@ -13,6 +13,7 @@ module.exports = {
     library: 'react-iterators',
     libraryTarget: 'umd',
     umdNamedDefine: true,
+    globalObject: 'typeof self !== \'undefined\' ? self : this',
   },
   module: {
     rules: [
