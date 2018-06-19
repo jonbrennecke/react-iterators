@@ -6,11 +6,13 @@ module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: './src/index.js',
   context: __dirname,
+  target: 'webworker',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'react-iterators',
-    libraryTarget: 'commonjs',
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
