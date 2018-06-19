@@ -1,6 +1,6 @@
 {
   "name": "react-iterators",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Common iterators (like Map, Slice, etc.) as React components",
   "main": "dist/main.bundle.js",
   "scripts": {
